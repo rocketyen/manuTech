@@ -1,0 +1,65 @@
+{
+    "products": [
+       {
+        "name": "Souris Razor",
+        "descripton": "blabla",
+        "picture": "chemin de l'image",
+        "price": 29.99
+       },
+
+       {
+        "name": "Souris Bluetooth",
+        "descripton": "blabla",
+        "picture": "chemin de l'image",
+        "price": 9.99
+      },
+
+      {
+        "name": "Souris Logitec",
+        "descripton": "blabla",
+        "picture": "chemin de l'image",
+        "price": 19.99
+      },
+      {
+        "name": "Clavier Razor",
+        "descripton": "blabla",
+        "picture": "chemin de l'image",
+        "price": 45
+      },
+
+      {
+       "name": "Clavier Bluetooth",
+       "descripton": "blabla",
+       "picture": "chemin de l'image",
+       "price": 15.03
+     },
+
+     {
+       "name": "Clavier Logitec",
+       "descripton": "blabla",
+       "picture": "chemin de l'image",
+       "price": 18.56
+     },
+
+     {
+        "name": "Ecran Razor",
+        "descripton": "blabla",
+        "picture": "chemin de l'image",
+        "price": 364.47
+      },
+
+      {
+       "name": "Ecran Bluetooth",
+       "descripton": "blabla",
+       "picture": "chemin de l'image",
+       "price": 99.99
+     },
+
+     {
+       "name": "Ecran Logitec",
+       "descripton": "blabla",
+       "picture": "chemin de l'image",
+       "price": 213.64
+     }
+    ]
+}
