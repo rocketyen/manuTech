@@ -6,83 +6,101 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="assets/css/style.css">
 
-</head>
 <body>
-<!-- partial:index.partial.html -->
-<!-- Nav -->
-<nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
-  <div class="row">
-      <div class="col">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Panier <span class="total-count"></span></button>
-        <button class="clear-cart btn btn-danger">Vider le panier</button></div>
-  </div>
-</nav>
+    <header>
+        <nav>
+            <div class="container-fluid colorBg">
+                <div class="row text-center">
+                    <div class="col mt-5 fs-4 d-none d-lg-block">
+                        <p>
+                            <span class="navbtn" type="button" href="#">Nos souris</span>
+                            <span>|</span>
+                            <span class="navbtn" type="button" href="#">Nos claviers</span>
+                            <span>|</span>
+                            <span class="navbtn" type="button" href="#">Nos &eacute;crans</span>
+                        </p>
+                    </div>
 
+                    <div class="col">
+                        <img class="logoSize" src="assets/img/logoManuTech.png" alt="">
+                    </div>
 
-<!-- Main -->
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div class="card" style="width: 20rem;">
-<img class="card-img-top" src="assets/img/razerMouse.jpg" alt="Card image cap">
-<div class="card-block">
-  <h4 class="card-title">Souris Razer</h4>
-  <p class="card-text">Prix: €39.99</p>
-  <button href="#" data-name="SourisRazer" data-price="39.99" class="add-to-cart btn btn-primary">Ajouter au panier</button>
-</div>
-</div>
-    </div>
-    <div class="col">
-      <div class="card" style="width: 20rem;">
-<img class="card-img-top" src="assets/img/bluetoothMouse.jpg" alt="Card image cap">
-<div class="card-block">
-  <h4 class="card-title">Souris bluetooth</h4>
-  <p class="card-text">Prix: €29.99</p>
-  <a href="#" data-name="Sourisbluetooth" data-price="29.99" class="add-to-cart btn btn-primary">Ajouter au panier</a>
-</div>
-</div>
-    </div>
-    <div class="col">
-      <div class="card" style="width: 20rem;">
-<img class="card-img-top" src="assets/img/LogitechMouse.jpg" alt="Card image cap">
-<div class="card-block">
-  <h4 class="card-title">Souris Logitech</h4>
-  <p class="card-text">Prix: €34.99</p>
-  <a href="#" data-name="SourisLogitech" data-price="34.99" class="add-to-cart btn btn-primary">Ajouter au panier</a>
-</div>
-</div>
-    </div>
-  </div>
-</div>
+                    <div class="col mt-5">
+                        <button type="button" data-toggle="modal" data-target="#cart">
+                        <img class="imgSize" src="assets/img/logoPanier.png" alt="">
+                        </button>
+                    </div>
 
-  
- <!-- Modal -->
-<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Panier</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <table class="show-cart table">
-          
-        </table>
-        <div>Prix Total : €<span class="total-cart"></span></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-        <button type="button" class="btn btn-primary">Commander</button>
-      </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row mtModif">
+            <div class="col">
+                <h2><img class="logoPng" src="assets/img/logoSouris.png" alt="">Nos Souris</h2>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="script.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <div class="container mt-5">
+        <div class="row" id="mouse">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mtModif">
+            <div class="col">
+                <h2><img class="logoPng" src="assets/img/logoClavier.png" alt="">Nos Clavier</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row" id="keyboard">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mtModif">
+            <div class="col">
+                <h2><img class="logoPng" src="assets/img/logoEcran.png" alt="">Nos &Eacutecran</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row" id="screen">
+        </div>
+    </div>
+
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Panier</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table class="show-cart table">
+                
+              </table>
+              <div>Prix Total : €<span class="total-cart"></span></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+              <button type="button" class="btn btn-primary">Commander</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>
