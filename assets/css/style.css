@@ -7,10 +7,16 @@ body{
     color: rgba(0, 0, 0, 0.432);
 }
 
+.imgBg{
+    width: 100%;
+}
+
+
 .colorBg{
     height: 150px;
     width: 100%;
     background-color: #1c82d1;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.678);
 }
 
 .logoSize{
@@ -34,6 +40,10 @@ a{
 
 .mtModif{
     margin-top: 100px;
+}
+
+.mtModifPlus{
+    margin-top: 200px;
 }
 
 .mbModif{
@@ -106,49 +116,6 @@ a{
             transform: rotate(40deg);
   }
 
-
-
-  /* SEARCHHHH */
-  .box{
-    position: absolute;
-    top: 27%;
-    left: 15%;
-    transform: translate(-50%,-50%);
-}
-.input {
-    padding: 10px;
-    width: 80px;
-    height: 80px;
-    background: #1c82d1;
-    border: 4px solid #463f57;
-    border-radius: 50px;
-    box-sizing: border-box;
-    font-family: Comic Sans MS;
-    font-size: 26px;
-    color: #fff;
-    outline: none;
-    transition: .5s;
-}
-.box:hover input{
-    width: 350px;
-    background: #2e86c9;
-    border-radius: 10px;
-}
-i{
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translate(-50%,-50%);
-    font-size: 26px;
-    color: #463f57;
-    transition: .2s;
-}
-.box:hover i{
-    opacity: 0;
-    z-index: -1;
-}
-
-
 hr{
     size: 25px;
 }
@@ -216,3 +183,55 @@ ul {
     }
   }
   
+
+  /* CAROUSEL */
+  
+  @keyframes display {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    30% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+  }
+  
+  .pic-ctn {
+    width: 100vw;
+    height: 300px;
+  }
+  
+  .pic-ctn > img {
+    position: absolute;
+    top: 50;
+    left: 0;
+    opacity: 0;
+    animation: display 40s infinite;
+  }
+  
+  img:nth-child(2) {
+    animation-delay: 10s;
+  }
+  img:nth-child(3) {
+    animation-delay: 20s
+  }
+  img:nth-child(4) {
+    animation-delay: 30s;
+  }
+  img:nth-child(5) {
+    animation-delay: 40s;
+  }
+  /* ******************* */
