@@ -6,8 +6,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="assets/css/style.css">
-
+<link rel="stylesheet" href="assets/css/style.css">    
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/logoManuTech.png">
+<meta name="description"
+        content="ManuTech t'accompagne vers les meilleures choix du marché sans te vider le porte monnaie." />
+    <script src="https://kit.fontawesome.com/afd6aa68df.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
 <body>
     <header>
         <nav>
@@ -15,11 +20,11 @@
                 <div class="row text-center">
                     <div class="col mt-5 fs-4 d-none d-lg-block">
                         <p>
-                            <span class="navbtn" type="button" href="#">Nos souris</span>
+                            <span class="navbtn" type="button"><a href="#mouse">Nos souris</a></span>
                             <span>|</span>
-                            <span class="navbtn" type="button" href="#">Nos claviers</span>
+                            <span class="navbtn" type="button"><a href="#keyboard">Nos claviers</a></span>
                             <span>|</span>
-                            <span class="navbtn" type="button" href="#">Nos &eacute;crans</span>
+                            <span class="navbtn" type="button"><a href="#screen">Nos &eacute;crans</a></span>
                         </p>
                     </div>
 
@@ -37,41 +42,55 @@
             </div>
         </nav>
     </header>
+
+    <div class="box">
+        <form name="search">
+            <input type="text" class="input" name="txt" 
+            onmouseout="document.search.txt.value = ''">
+        </form>
+            <i class="fas fa-search"></i>
+    </div>
+
     <div class="container">
         <div class="row mtModif">
-            <div class="col">
+            <div class="col text-center">
+                <hr>
                 <h2><img class="logoPng" src="assets/img/logoSouris.png" alt="">Nos Souris</h2>
+                <hr>
             </div>
         </div>
     </div>
 
-    <div class="container mt-5">
-        <div class="row" id="mouse">
+    <div class="container align-items-center mt-5">
+        <div class="row " id="mouse">
         </div>
     </div>
-
     <div class="container">
         <div class="row mtModif">
-            <div class="col">
+            <div class="col text-center">
+                <hr>
                 <h2><img class="logoPng" src="assets/img/logoClavier.png" alt="">Nos Clavier</h2>
+                <hr>
             </div>
         </div>
     </div>
 
-    <div class="container mt-5">
+    <div class="container align-items-center mt-5">
         <div class="row" id="keyboard">
         </div>
     </div>
 
     <div class="container">
         <div class="row mtModif">
-            <div class="col">
+            <div class="col text-center">
+                <hr>
                 <h2><img class="logoPng" src="assets/img/logoEcran.png" alt="">Nos &Eacutecran</h2>
+                <hr>
             </div>
         </div>
     </div>
 
-    <div class="container mt-5">
+    <div class="container align-items-center mt-5">
         <div class="row" id="screen">
         </div>
     </div>

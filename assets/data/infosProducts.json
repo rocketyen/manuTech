@@ -22,35 +22,63 @@
         "product_denomination": "Souris Logitech",
         "product_picture": "assets/img/LogitechMouse.jpg",
         "product_price": 79.99
+      },
+
+      {
+        "product_reference": 4,
+        "product_denomination": "Souris Corsair",
+        "product_picture": "assets/img/corsairMouse.jpg",
+        "product_price": 39.95
+      },
+
+      {
+        "product_reference": 5,
+        "product_denomination": "Souris Logitech",
+        "product_picture": "assets/img/corsairM65Mouse.jpg",
+        "product_price": 69.95
       }
     ],
 
     "clavier":[
       {
-        "product_reference": 4,
+        "product_reference": 6,
         "product_denomination": "Clavier Razer",
         "product_picture": "assets/img/razerClavier.jpg",
         "product_price": 125
       },
 
       {
-       "product_reference": 5,   
+       "product_reference": 7,   
        "product_denomination": "Clavier Bluetooth",
        "product_picture": "assets/img/bluetoothClavier.jpg",
        "product_price": 50
      },
 
      {
-       "product_reference": 6,  
+       "product_reference": 8,  
        "product_denomination": "Clavier Apple",
        "product_picture": "assets/img/appleClavier.jpg",
        "product_price": 129.99
-     }
+     },
+
+     {
+      "product_reference": 9,  
+      "product_denomination": "Clavier Rog",
+      "product_picture": "assets/img/rogClavier.jpg",
+      "product_price": 139.94
+    },
+
+    {
+      "product_reference": 10,  
+      "product_denomination": "Clavier Apple",
+      "product_picture": "assets/img/chromaClavier.jpg",
+      "product_price": 249.95
+    }
     ],
 
       "ecran":[
      {
-        "product_reference": 7,
+        "product_reference": 11,
         "product_denomination": "Ecran Razor",
         "product_picture": "assets/img/razerEcran.jpg",
         "product_price": 350
@@ -58,18 +86,32 @@
       },
 
       {
-       "product_reference": 8,   
+       "product_reference": 12,   
        "product_denomination": "iMac",
        "product_picture": "assets/img/iMac.jpg",
        "product_price": 3499.99
      },
 
      { 
-       "product_reference": 9,  
+       "product_reference": 13,  
        "product_denomination": "Ecran NOV incurvé",
        "product_picture": "assets/img/ecranNov.jpg",
        "product_price": 750
-     }
+     },
+
+     { 
+      "product_reference": 14,  
+      "product_denomination": "Ecran Gigabyte M27F",
+      "product_picture": "assets/img/gigabyteEcran.jpg",
+      "product_price": 319.94
+    },
+
+    { 
+      "product_reference": 15,  
+      "product_denomination": "Ecran AOC BK",
+      "product_picture": "assets/img/aosEcran.jpg",
+      "product_price": 279.95
+    }
     ]
     }    
 }
