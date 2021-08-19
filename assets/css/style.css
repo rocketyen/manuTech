@@ -1,0 +1,24 @@
+body{
+    font-family: 'Bahnschrift';
+}
+
+.navbtn:hover{
+    text-decoration:underline;
+    color: rgba(0, 0, 0, 0.432);
+}
+
+.colorBg{
+    height: 150px;
+    width: 100%;
+    background-color: #1c82d1;
+}
+
+.logoSize{
+    height: 250px;
+
+}
+
+.imgSize{
+    height: 50px;
+    width: 50px;
+}
