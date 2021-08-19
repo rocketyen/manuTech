@@ -71,3 +71,57 @@ fetch('assets/data/infosProducts.json')
 
         })
     })
+
+
+let reference = infos.product_reference;
+let cart =[]
+let addProductToCart = (reference) => {
+    if(/*newTitle.value && newLink.value*/){
+        
+        cart.push(item);
+        displayItems();
+        newTitle.value = '';
+        newLink.value = '';
+        localStorage.setItem('items', JSON.stringify(items))
+    }
+}   
+    
+// let totalCount = () => {
+//    if(localStorage.getItem('reference')){
+       
+//    }
+// }
+
+
+
+function Item(denomination, picture, price) {
+    this.denomination = denomination;
+    this.picture = picture;
+    this.price = price;
+    this.count = count;
+  }
+
+let cart = [];
+function saveCart() {
+    localStorage.setItem('shoppingCart', JSON.stringify(cart));
+  }
+var obj = {};
+obj.addItemToCart = function(denomination, price, count) {
+    for(var item in cart) {
+      if(cart[item].denomination === denomination) {
+        cart[item].count ++;
+        saveCart();
+        return;
+      }
+    }
+    var item = new Item(denomination, price, count);
+    cart.push(item);
+    saveCart();
+  }
+  $('.add-to-cart').click(function(event) {
+    event.preventDefault();
+    var denomination = $(this).data('denomination');
+    var price = Number($(this).data('price'));
+    shoppingCart.addItemToCart(denomination, price, 1);
+    displayCart();
+  });
