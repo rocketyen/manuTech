@@ -20,22 +20,29 @@ fetch('assets/data/infosProducts.json')
                     <h3>${denomination}</h3>
                     <h4>${reference}</h4>
                     <h4>${price}</h4>
-                </div>
-                
+                    <button id='Add'>Ajouter panier</button>
+                </div>                
             </div>
             `;
             console.log(itemHoardings)
             document.getElementById('hoarding').innerHTML += itemHoardings;
-          
+            
+            let btnAdd = document.getElementById('Add')
+            let addProductToCart = () => { 
+            localStorage.setItem("ref", JSON.stringify(reference));
+            console.log(reference);
+            }
+            btnAdd.addEventListener('click', addProductToCart);
       })
     })
-
-    let addProductToCart = () => { 
-        localeStorage.getItem('reference')
-
-
-       }
-
+    // let btnAdd = document.getElementById('btnAdd')
+    // let addProductToCart = () => { 
+    //     localeStorage.setItem('reference', JSON.stringify(reference));
+    //     console.log(reference);
+    //    }
+    // btnAdd.addEventListener('click', addProductToCart);
+    
+   
     // var product = {};
     // var cart = [];
     // function saveCart() {
