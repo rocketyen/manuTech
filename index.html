@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html lang="fr">
-
+<html lang="fr" >
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ManuTech</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logoManuTech.png">
-    <meta name="description"
+  <meta charset="UTF-8">
+  <title>ManuTech</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="assets/css/style.css">    
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/logoManuTech.png">
+<meta name="description"
         content="ManuTech t'accompagne vers les meilleures choix du marché sans te vider le porte monnaie." />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/afd6aa68df.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
     <header>
         <nav>
@@ -21,11 +20,11 @@
                 <div class="row text-center">
                     <div class="col mt-5 fs-4 d-none d-lg-block">
                         <p>
-                            <span class="navbtn" type="button" href="#">Nos souris</span>
+                            <span class="navbtn" type="button"><a href="#mouse">Nos souris</a></span>
                             <span>|</span>
-                            <span class="navbtn" type="button" href="#">Nos claviers</span>
+                            <span class="navbtn" type="button"><a href="#keyboard">Nos claviers</a></span>
                             <span>|</span>
-                            <span class="navbtn" type="button" href="#">Nos &eacute;crans</span>
+                            <span class="navbtn" type="button"><a href="#screen">Nos &eacute;crans</a></span>
                         </p>
                     </div>
 
@@ -34,54 +33,87 @@
                     </div>
 
                     <div class="col mt-5">
-                        <img class="imgSize" src="assets/img/logoPanier.png" alt="">
+                        <img class="imgSize" type="button" src="assets/img/logoPanier.png" data-toggle="modal" data-target="#cart" alt="">
                     </div>
 
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <div class="row mtModif">
-            <div class="col">
-                <h2><img class="logoPng" src="assets/img/logoSouris.png" alt="">Nos Souris</h2>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col mt-5 pic-ctn">
+                <img class="imgBg pic" src="assets/img/reduction.jpg" alt="">
+                <img class="imgBg pic" src="assets/img/2.jpg" alt="">
+                <img class="imgBg pic" src="assets/img/bg.jpg" alt="">
+                <img class="imgBg pic" src="assets/img/4.jpg" alt="">
             </div>
         </div>
     </div>
 
-    <div class="container mt-5">
+    <div class="container">
+        <div class="row mtModifPlus">
+            <div class="col text-center">
+                <hr>
+                <h2><img class="logoPng" src="assets/img/logoSouris.png" alt="">Nos Souris</h2>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <div class="container align-items-center mt-5">
         <div class="row" id="mouse">
         </div>
     </div>
-
     <div class="container">
         <div class="row mtModif">
-            <div class="col">
+            <div class="col text-center">
+                <hr>
                 <h2><img class="logoPng" src="assets/img/logoClavier.png" alt="">Nos Clavier</h2>
+                <hr>
             </div>
         </div>
     </div>
 
-    <div class="container mt-5">
+    <div class="container align-items-center mt-5">
         <div class="row" id="keyboard">
         </div>
     </div>
 
     <div class="container">
         <div class="row mtModif">
-            <div class="col">
+            <div class="col text-center">
+                <hr>
                 <h2><img class="logoPng" src="assets/img/logoEcran.png" alt="">Nos &Eacutecran</h2>
+                <hr>
             </div>
         </div>
     </div>
 
-    <div class="container mt-5">
+    <div class="container align-items-center mt-5">
         <div class="row" id="screen">
         </div>
     </div>
 
+    <!-- FOOOOOOOTEERR -->
+    <footer>
+            <div class="newFooter mt-5">
+                <ul>
+                    <li><a class="textNew" target="_blank" href="">Contact</a></li>
+                    <li><a class="textNew" target="_blank" href="">RGPD</a></li>
+                    <li><a class="textNew" target="_blank" href="mailto:ManuTech@gmail.thierry">Qui sommes nous?</a></li>
+                    <li><a class="textNew" target="_blank" href="">Mentions légales</a></li>
+                    <li><a class="textNew" target="_blank" href="https://github.com/johnnydwtt">Github</a></li>
+                    <li>
+                        <p>👋</p>
+                    </li>
+                </ul>
+            </div>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
 
