@@ -11,7 +11,7 @@ fetch('assets/data/infosProducts.json')
             let picture = infos.product_picture;
             let price = infos.product_price;
             
-            let productHoardings = `
+            let itemHoardings = `
             <div class='col-12 col-lg-4'>     
                 <div class='col-6'>
                     <img class='img-fluid' src='${picture}'/>
@@ -30,19 +30,25 @@ fetch('assets/data/infosProducts.json')
       })
     })
 
-    var product = {};
-    var cart = [];
-    function saveCart() {
-      localStorage.setProduct('shoppingCart', JSON.stringify(cart));
-    }
+    let addProductToCart = () => { 
+        localeStorage.getItem('reference')
+
+
+       }
+
+    // var product = {};
+    // var cart = [];
+    // function saveCart() {
+    //   localStorage.setProduct('shoppingCart', JSON.stringify(cart));
+    // }
   
     // addProduct to cart
-    product.addProductToCart = function(denomination) {
-      for(var product in cart) {
-        if(cart[product].denomination === denomination) {
-          cart[product].count ++;
-          saveCart();
-          return;
-        }
-      }
-    }
+    // product.addProductToCart = function(denomination) {
+    //   for(var product in cart) {
+    //     if(cart[product].denomination === denomination) {
+    //       cart[product].count ++;
+    //       saveCart();
+    //       return;
+    //     }
+    //   }
+    // }
