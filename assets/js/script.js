@@ -8,7 +8,6 @@ fetch('assets/data/infosProducts.json')
 
             let reference = infos.product_reference;
             let denomination = infos.product_denomination;
-            let description = infos.product_description;
             let picture = infos.product_picture;
             let price = infos.product_price;
             
@@ -20,7 +19,6 @@ fetch('assets/data/infosProducts.json')
                 <div class='col-6'>
                     <h3>${denomination}</h3>
                     <h4>${reference}</h4>
-                    <p>${description}</p>
                     <h4>${price}</h4>
                 </div>
                 
