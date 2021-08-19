@@ -1,0 +1,75 @@
+{
+    "products": [
+       {
+        "product_reference": 1,
+        "product_denomination": "Souris Razor",
+        "product_description": "blabla",
+        "product_picture": "chemin de l'image",
+        "product_price": 29.99
+        
+       },
+
+       {
+        "product_reference": 2, 
+        "product_denomination": "Souris Bluetooth",
+        "product_description": "blabla",
+        "product_picture": "chemin de l'image",
+        "product_price": 9.99
+      },
+
+      {
+        "product_reference": 3,
+        "product_denomination": "Souris Logitec",
+        "product_description": "blabla",
+        "product_picture": "chemin de l'image",
+        "product_price": 19.99
+      },
+      {
+        "product_reference": 4,
+        "product_denomination": "Clavier Razor",
+        "product_description": "blabla",
+        "product_picture": "chemin de l'image",
+        "product_price": 45
+      },
+
+      {
+       "product_reference": 5,   
+       "product_denomination": "Clavier Bluetooth",
+       "product_description": "blabla",
+       "product_picture": "chemin de l'image",
+       "product_price": 15.03
+     },
+
+     {
+       "product_reference": 6,  
+       "product_denomination": "Clavier Logitec",
+       "product_description": "blabla",
+       "product_picture": "chemin de l'image",
+       "product_price": 18.56
+     },
+
+     {
+        "product_reference": 7,
+        "product_denomination": "Ecran Razor",
+        "product_description": "blabla",
+        "product_picture": "chemin de l'image",
+        "product_price": 364.47
+      },
+
+      {
+       "product_reference": 8,   
+       "product_denomination": "Ecran Bluetooth",
+       "product_description": "blabla",
+       "product_picture": "chemin de l'image",
+       "product_price": 99.99
+     },
+
+     { 
+       "product_reference": 9,  
+       "product_denomination": "Ecran Logitec",
+       "product_description": "blabla",
+       "product_picture": "chemin de l'image",
+       "product_price": 213.64
+     }
+    ]
+}
