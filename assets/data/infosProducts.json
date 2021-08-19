@@ -1,12 +1,12 @@
 {
-  "products":
+    "products": 
     {
-    "souris": [
+      "souris":[
        {
         "product_reference": 1,
         "product_denomination": "Souris Razor",
-        "product_picture": "chemin de l'image",
-        "product_price": 29.99
+        "product_picture": "assets/img/razerMouse.jpg",
+        "product_price": 89.99
         
        },
     
@@ -14,60 +14,65 @@
        {
         "product_reference": 2, 
         "product_denomination": "Souris Bluetooth",
-        "product_picture": "chemin de l'image",
-        "product_price": 9.99
-       },
-    
+        "product_picture": "assets/img/bluetoothMouse.jpg",
+        "product_price": 40
+      },
+
       {
         "product_reference": 3,
-        "product_denomination": "Souris Logitec",
-        "product_picture": "chemin de l'image",
-        "product_price": 19.99
+        "product_denomination": "Souris Logitech",
+        "product_picture": "assets/img/LogitechMouse.jpg",
+        "product_price": 79.99
       }
     ],
-      "Claviers": [
+
+    "clavier":[
       {
         "product_reference": 4,
-        "product_denomination": "Clavier Razor",
-        "product_picture": "chemin de l'image",
-        "product_price": 45
+        "product_denomination": "Clavier Razer",
+        "product_picture": "assets/img/razerClavier.jpg",
+        "product_price": 125
       },
 
       {
        "product_reference": 5,   
        "product_denomination": "Clavier Bluetooth",
-       "product_picture": "chemin de l'image",
-       "product_price": 15.03
+       "product_picture": "assets/img/bluetoothClavier.jpg",
+       "product_price": 50
      },
 
      {
        "product_reference": 6,  
-       "product_denomination": "Clavier Logitec",
-       "product_picture": "chemin de l'image",
-       "product_price": 18.56
+       "product_denomination": "Clavier Apple",
+       "product_picture": "assets/img/appleClavier.jpg",
+       "product_price": 129.99
      }
     ],
-    "Ecrans": [
+
+      "ecran":[
      {
         "product_reference": 7,
         "product_denomination": "Ecran Razor",
-        "product_picture": "chemin de l'image",
-        "product_price": 364.47
+        "product_picture": "assets/img/razerEcran.jpg",
+        "product_price": 350
+        
       },
 
       {
        "product_reference": 8,   
-       "product_denomination": "Ecran Bluetooth",
-       "product_picture": "chemin de l'image",
-       "product_price": 99.99
+       "product_denomination": "iMac",
+       "product_picture": "assets/img/iMac.jpg",
+       "product_price": 3499.99
      },
 
      { 
        "product_reference": 9,  
-       "product_denomination": "Ecran Logitec",
-       "product_picture": "chemin de l'image",
-       "product_price": 213.64
+       "product_denomination": "Ecran NOV incurvé",
+       "product_picture": "assets/img/ecranNov.jpg",
+       "product_price": 750
      }
     ]
     }
+
+    
 }

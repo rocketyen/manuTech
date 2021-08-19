@@ -1,29 +1,88 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
     <title>ManuTech</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logoManuTech.png">
+    <meta name="description"
+        content="ManuTech t'accompagne vers les meilleures choix du marché sans te vider le porte monnaie." />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
 
-    <h1>test</h1>
-    <div class="container-fluid">
-        <div class="row">
-            
-                <div id="hoarding">
-                    
+<body>
+    <header>
+        <nav>
+            <div class="container-fluid colorBg">
+                <div class="row text-center">
+                    <div class="col mt-5 fs-4 d-none d-lg-block">
+                        <p>
+                            <span class="navbtn" type="button" href="#">Nos souris</span>
+                            <span>|</span>
+                            <span class="navbtn" type="button" href="#">Nos claviers</span>
+                            <span>|</span>
+                            <span class="navbtn" type="button" href="#">Nos &eacute;crans</span>
+                        </p>
+                    </div>
+
+                    <div class="col">
+                        <img class="logoSize" src="assets/img/logoManuTech.png" alt="">
+                    </div>
+
+                    <div class="col mt-5">
+                        <img class="imgSize" src="assets/img/logoPanier.png" alt="">
+                    </div>
+
                 </div>
-            
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row mtModif">
+            <div class="col">
+                <h2><img class="logoPng" src="assets/img/logoSouris.png" alt="">Nos Souris</h2>
+            </div>
         </div>
     </div>
-   
-    
-    
+
+    <div class="container mt-5">
+        <div class="row" id="mouse">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mtModif">
+            <div class="col">
+                <h2><img class="logoPng" src="assets/img/logoClavier.png" alt="">Nos Clavier</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row" id="keyboard">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mtModif">
+            <div class="col">
+                <h2><img class="logoPng" src="assets/img/logoEcran.png" alt="">Nos &Eacutecran</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row" id="screen">
+        </div>
+    </div>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
