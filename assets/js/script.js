@@ -13,7 +13,7 @@ var fnMouse = (jsonProducts) => {
             <h3>${price}€</h3>
 
             <div>
-            <span class="btn effect01 add-to-cart" data-denomination="${denomination}">Ajouter au panier</span>
+            <span class="btn effect01 add-to-cart" data-denomination="${denomination} ${price}">Ajouter au panier</span>
             </div>
 
         </div>`;
@@ -39,7 +39,7 @@ let fnKeyboard = (jsonProducts) => {
                 <h3>${price}€</h3>
 
                 <div>
-                <span class="btn effect01 add-to-cart" data-denomination="${denomination}">Ajouter au panier</span>
+                <span class="btn effect01 add-to-cart" data-denomination="${denomination} ${price}">Ajouter au panier</span>
                 </div>
 
             </div> `;
@@ -63,7 +63,7 @@ let fnScreen = (jsonProducts) => {
             <h3>${price}€</h3>
 
             <div>
-            <span class="btn effect01 add-to-cart"  data-denomination='${denomination}'>Ajouter au panier</span>
+                <span class="btn effect01 add-to-cart" data-denomination="${denomination} ${price}">Ajouter au panier</span>
             </div>
 
             </div>`;
@@ -106,10 +106,11 @@ let cart =[];
 
 let addItem = (event) => {
     let test = event.target.dataset.denomination;
+    let dollars = event.target.dataset.price;
     console.log(test);
-    cart.push(test)    
+    cart.push(test,dollars)    
     let panier = document.getElementById('add');
-    panier.innerHTML=test;
+    panier.innerHTML=cart;
 }
 
 // function create
