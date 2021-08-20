@@ -14,7 +14,7 @@ var fnMouse = (jsonProducts) => {
             <h3>${price}€</h3>
 
             <div>
-            <span class="btn effect01 addToCart">Ajouter au panier</span>
+            <span class="btn effect01 add-to-cart data-denomination="${Denomination}"">Ajouter au panier</span>
             </div>
 
         </div>`;    
@@ -40,7 +40,7 @@ let fnKeyboard = (jsonProducts) => {
                 <h3 id="price">${price}€</h3>
 
                 <div>
-                <span class="btn effect01 aaddToCart">Ajouter au panier</span>
+                <span class="btn effect01 add-to-cart data-denomination="${Denomination}"">Ajouter au panier</span>
                 </div>
 
             </div> `;
@@ -65,7 +65,7 @@ let fnScreen = (jsonProducts) => {
             <h3>${price}€</h3>
 
             <div>
-            <span class="btn effect01">Ajouter au panier</span>
+            <span class="btn effect01 add-to-cart data-denomination="${Denomination}"">Ajouter au panier</span>
             </div>
 
         </div> `;
@@ -121,7 +121,18 @@ let addItem = () => {
     }
 }
 
- 
+ /////
+ let addBtn = document.querySelectorAll('.add-to-cart');
+
+ addBtn.forEach((element)=>{
+
+   element.addEventListener('click', addItem)
+
+   let addItem = (event) => {
+     console.log(event.target.dataset.denomination)
+    }
+  });
+ /////
       
 let addBtn = document.getElementById('add-to-cart');
 addBtn.addEventListener('click', addItem)
@@ -214,7 +225,7 @@ let totalCart = () => {
 /*---------------------------------------------------------------------------------------
  ---------------------------------------------------------------------------------------*/
             
-    // let cart = []; 
+    // let test = []; 
 
     // let addItem = () => {
     //     // let denomination2 = document.getElementById('denomination');
@@ -232,7 +243,7 @@ let totalCart = () => {
     // let addBtn = document.querySelector('.add-to-cart');
     // console.log(addBtn)
     //     addBtn.addEventListener('click', addItem)
-    //     console.log(cart)
+        //console.log(test)
     
 
 
