@@ -13,7 +13,7 @@ var fnMouse = (jsonProducts) => {
             <h3>${price}€</h3>
 
             <div>
-            <span class="btn effect01 addToCart">Ajouter au panier</span>
+            <span class="btn effect01 add-to-cart" data-denomination="${denomination}">Ajouter au panier</span>
             </div>
 
         </div>`;
@@ -39,7 +39,7 @@ let fnKeyboard = (jsonProducts) => {
                 <h3>${price}€</h3>
 
                 <div>
-                <span class="btn effect01 aaddToCart">Ajouter au panier</span>
+                <span class="btn effect01 add-to-cart" data-denomination="${denomination}">Ajouter au panier</span>
                 </div>
 
             </div> `;
@@ -63,7 +63,7 @@ let fnScreen = (jsonProducts) => {
             <h3>${price}€</h3>
 
             <div>
-                <span class="btn effect01 aaddToCart">Ajouter au panier</span>
+                <span class="btn effect01 add-to-cart" data-denomination="${denomination}">Ajouter au panier</span>
             </div>
 
             </div>`;
@@ -97,6 +97,15 @@ fetch('assets/data/infosProducts.json')
     fnMouse(jsonProducts)
     fnKeyboard(jsonProducts)
     fnScreen(jsonProducts)  
+
+    let addBtn = document.querySelectorAll('.add-to-cart');
+      
+      addBtn.forEach((element)=>{
+        element.addEventListener('click', addItem)
+        
+
+      })
+    
 })
 
 
@@ -110,20 +119,16 @@ var saveCart = () => {
 
 // fonction pour ajouter un produit au panier  
 
-let addItem = () => {
-    let newDenomination = document.getElementById('denomination');
-    let newPrice = document.getElementById('price');
-    if(newDenomination && newPrice){        
-        console.log(cart);      
-        cart.push(denomination);
-        localStorage.setItem('items', JSON.stringify(cart))
-        saveCart();        
-    }
+let addItem = (event) => {
+    let test = event.target.dataset.denomination;
+    console.log(test);
+    cart.push(test)    
+    let panier = document.getElementById('add');
+    panier.innerHTML=test;
 }
 
 // function create
-let addBtn = document.getElementById('add-to-cart');
-addBtn.addEventListener('click', addItem)
+
 
 // fonction pour supprimer un élément du panier
 
