@@ -85,3 +85,7 @@ fetch('assets/data/infosProducts.json')
 
         })
 // Récupération des données du fichier json local
+
+// function create
+
+
