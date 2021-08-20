@@ -17,7 +17,6 @@ var fnMouse = (jsonProducts) => {
             </div>
 
         </div>`;
-    console.log(itemHoardings)
     document.getElementById('mouse').innerHTML += itemHoardings;
 
 })  
@@ -43,7 +42,6 @@ let fnKeyboard = (jsonProducts) => {
                 </div>
 
             </div> `;
-        console.log(itemHoardings)
         document.getElementById('keyboard').innerHTML += itemHoardings;
 
 })
@@ -68,11 +66,12 @@ let fnScreen = (jsonProducts) => {
                 </div>
 
             </div>`;
-        console.log(itemHoardings)
         document.getElementById('screen').innerHTML += itemHoardings;
 
 })
 }
+
+
 
 fetch('assets/data/infosProducts.json')
     .then(response => response.json())
