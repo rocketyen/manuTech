@@ -97,59 +97,110 @@ fetch('assets/data/infosProducts.json')
             // addBtn.onclick = addItem;
             // console.log(items);
             
-            var shoppingCart = (function() {
-
-            function Item(reference, denomination, picture, price, count) {
-                this.reference = reference;
-                this.denomination = denomination;
-                this.picture = picture;
-                this.price = price;
-                this.count = count;
-              }
-
-            let cart = [];
-            function saveCart() {
-                localStorage.setItem('shoppingCart', JSON.stringify(cart));
-              }
-
-            var obj = {};
-            obj.addItemToCart = function(reference, denomination, price, count) {
-                for(var item in cart) {
-                  if(cart[item].denomination === denomination) {
-                    cart[item].count ++;
-                    saveCart();
-                    return;
-                  }
-                }
-                var item = new Item(reference, denomination, price, count);
-                cart.push(item);
-                saveCart();
-              }               
-            })(); 
-            $('.add-to-cart').click(function(event) {
-                event.preventDefault();
-                var denomination = $(this).data('denomination');
-                var price = Number($(this).data('price'));
-                shoppingCart.addItemToCart(denomination, price, 1);
-                displayCart();
-              });            
-        })
+            fetch('assets/data/infosProducts.json')
+            .then(response => response.json())
+            .then((jsonProducts) => {
+                console.log(jsonProducts)
+                // factorisation des fonctions
+                fnMouse(jsonProducts)
+                fnKeyboard(jsonProducts)
+                fnScreen(jsonProducts)
+        
+                    // let addItem = () => {
+                    //     let denomination = document.getElementById('denomination');
+                    //     if(denomination.value){
+                    //         let item = [denomination.value];
+                    //         items.push(item);
+                    //         displayItems();
+                    //         denomination.value = '';
+                    //         localStorage.setItem('items', JSON.stringify(items))
+                    //     }
+                    // }
+                    // let addBtn = document.getElementById('add-to-cart');
+                    // addBtn.onclick = addItem;
+                    // console.log(items);
+                    
+                    var shoppingCart = (function() {
+        
+                    function Item(reference, denomination, picture, price, count) {
+                        this.reference = reference;
+                        this.denomination = denomination;
+                        this.picture = picture;
+                        this.price = price;
+                        this.count = count;
+                      }
+        
+                    let cart = [];
+                    function saveCart() {
+                        localStorage.setItem('shoppingCart', JSON.stringify(cart));
+                      }
+        
+                    var obj = {};
+                    obj.addItemToCart = function(reference, denomination, price, count) {
+                        for(var item in cart) {
+                          if(cart[item].denomination === denomination) {
+                            cart[item].count ++;
+                            saveCart();
+                            return;
+                          }
+                        }
+                        var item = new Item(reference, denomination, price, count);
+                        cart.push(item);
+                        saveCart();
+                      }               
+                    })(); 
+                    $('.add-to-cart').click(function(event) {
+                        event.preventDefault();
+                        var denomination = $(this).data('denomination');
+                        var price = Number($(this).data('price'));
+                        shoppingCart.addItemToCart(denomination, price, 1);
+                        displayCart();
+                      });            
+                })
+           
+        
+            // function saveCart() {
+            //     localStorage.setItem('shoppingCart', JSON.stringify(cart));
+            //   }
+        
+            // let cart = [];    
+        
+            // function addProductToCart(denomination) {
+            //         for(var product_reference in cart) {
+            //         if(cart[product_reference].denomination === denomination) {
+            //             cart[product_reference].count ++;
+            //             saveCart();
+            //             return;
+            //         }
+            //         }
+            //     }
+               
+        // Récupération des données du fichier json local
+        
    
 
-    // function saveCart() {
-    //     localStorage.setItem('shoppingCart', JSON.stringify(cart));
-    //   }
+    function saveCart() {
+        localStorage.setItem('shoppingCart', JSON.stringify(cart));
+      }
 
-    // let cart = [];    
+    let cart = [];    
 
-    // function addProductToCart(denomination) {
-    //         for(var product_reference in cart) {
-    //         if(cart[product_reference].denomination === denomination) {
-    //             cart[product_reference].count ++;
-    //             saveCart();
-    //             return;
-    //         }
-    //         }
-    //     }
+    function addProductToCart(denomination) {
+            for(var product_reference in cart) {
+            if(cart[product_reference].denomination === denomination) {
+                cart[product_reference].count ++;
+                saveCart();
+                return;
+            }
+            }
+        }
+        $('.add-to-cart').click(function(event) {
+            event.preventDefault();
+            var denomination = $(this).data('denomination');
+            var price = Number($(this).data('price'));
+            shoppingCart.addProductToCart(denomination, price, 1);
+            displayCart();
+          });
+        });    
        
-// Récupération des données du fichier json local
+// Récupération des données du fichier json 
