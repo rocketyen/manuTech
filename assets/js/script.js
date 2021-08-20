@@ -13,10 +13,10 @@ var fnMouse = (jsonProducts) => {
             <h3>${price}€</h3>
 
             <div>
-            <span class="btn effect01 add-to-cart" data-denomination='${denomination}'>Ajouter au panier</span>
+            <span class="btn effect01 add-to-cart" data-denomination="${denomination}">Ajouter au panier</span>
             </div>
 
-        </div>`;    
+        </div>`;
     document.getElementById('mouse').innerHTML += itemHoardings;
     
 
@@ -39,11 +39,10 @@ let fnKeyboard = (jsonProducts) => {
                 <h3>${price}€</h3>
 
                 <div>
-                <span class="btn effect01 add-to-cart" data-denomination='${denomination}' >Ajouter au panier</span>
+                <span class="btn effect01 add-to-cart" data-denomination="${denomination}">Ajouter au panier</span>
                 </div>
 
             </div> `;
-        
         document.getElementById('keyboard').innerHTML += itemHoardings;
 
 })
@@ -67,7 +66,7 @@ let fnScreen = (jsonProducts) => {
             <span class="btn effect01 add-to-cart"  data-denomination='${denomination}'>Ajouter au panier</span>
             </div>
 
-        </div> `;
+            </div>`;
         
         document.getElementById('screen').innerHTML += itemHoardings;            
         })
@@ -85,53 +84,51 @@ fetch('assets/data/infosProducts.json')
     fnMouse(jsonProducts)
     fnKeyboard(jsonProducts)
     fnScreen(jsonProducts)  
+
+    let addBtn = document.querySelectorAll('.add-to-cart');
+      
+      addBtn.forEach((element)=>{
+        element.addEventListener('click', addItem)
+        
+
+      })
+    
 })
 
 
-
-var shoppingCart = (function() {
 let cart =[];
 
 // fonction pour sauvegarder sur le localStorage 
 
-var saveCart = () => {
-    localStorage.setItem('shoppingCart', JSON.stringify(cart));
-  }
+
 
 // fonction pour ajouter un produit au panier  
 
-// let addItem = () => {
-//     let newDenomination = document.getElementById('denomination');
-//     let newPrice = document.getElementById('price');
-//     if(newDenomination && newPrice){        
-//         console.log(cart);      
-//         cart.push(denomination);
-//         localStorage.setItem('items', JSON.stringify(cart))
-//         saveCart();        
+let addItem = (event) => {
+    let test = event.target.dataset.denomination;
+    console.log(test);
+    cart.push(test)    
+    let panier = document.getElementById('add');
+    panier.innerHTML=test;
+}
+
+// function create
+
+
+// let addItem = (event, denomination, price, count) => {
+//     console.log(event.target.dataset.denomination);
+//     for(var item in cart) {
+//       if(cart[item].denomination === denomination) {
+//         cart[item].count ++;
+//         saveCart();
+//         return;
+//       }
 //     }
-// }
-let addBtn = document.querySelectorAll('.add-to-cart');
+//     var item = new denomination(denomination, price, count);
+//     cart.push(item);
+//     saveCart();
+//   }
 
-addBtn.forEach((element)=>{
-
-element.addEventListener('click', addItem)
-
-
-
-let addItem = (event, denomination, price, count) => {
-    console.log(event.target.dataset.denomination);
-    for(var item in cart) {
-      if(cart[item].denomination === denomination) {
-        cart[item].count ++;
-        saveCart();
-        return;
-      }
-    }
-    var item = new denomination(denomination, price, count);
-    cart.push(item);
-    saveCart();
-  }
-});
 // fonction pour supprimer un élément du panier
 
 let removeItemFromCart = (denomination) => {
@@ -185,7 +182,6 @@ let totalCart = () => {
     }
     return Number(totalCart);
   }
-})();
 
 $('.add-to-cart').click(function(event) {
     event.preventDefault();
