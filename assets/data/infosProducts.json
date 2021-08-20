@@ -2,15 +2,14 @@
     "products": 
     {
       "souris":[
-       {
+      {
         "product_reference": 1,
         "product_denomination": "Souris Razer",
         "product_picture": "assets/img/razerMouse.jpg",
-        "product_price": 89.99
-        
-       },
+        "product_price": 89.99        
+      },
 
-       {
+      {
         "product_reference": 2, 
         "product_denomination": "Souris Bluetooth",
         "product_picture": "assets/img/bluetoothMouse.jpg",
@@ -113,7 +112,5 @@
       "product_price": 279.95
     }
     ]
-    }
-
-    
+    }    
 }
