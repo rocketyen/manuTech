@@ -13,7 +13,7 @@ var fnMouse = (jsonProducts) => {
             <h3>${price}€</h3>
 
             <div>
-            <span class="btn effect01 addToCart">Ajouter au panier</span>
+            <span class="btn effect01 add-to-cart" data-denomination='${denomination}'>Ajouter au panier</span>
             </div>
 
         </div>`;    
@@ -39,7 +39,7 @@ let fnKeyboard = (jsonProducts) => {
                 <h3>${price}€</h3>
 
                 <div>
-                <span class="btn effect01 aaddToCart">Ajouter au panier</span>
+                <span class="btn effect01 add-to-cart" data-denomination='${denomination}' >Ajouter au panier</span>
                 </div>
 
             </div> `;
@@ -64,26 +64,13 @@ let fnScreen = (jsonProducts) => {
             <h3>${price}€</h3>
 
             <div>
-            <span class="btn effect01">Ajouter au panier</span>
+            <span class="btn effect01 add-to-cart"  data-denomination='${denomination}'>Ajouter au panier</span>
             </div>
 
         </div> `;
         
         document.getElementById('screen').innerHTML += itemHoardings;            
         })
-        // let addItem = () => {
-        //     let denomination = document.getElementById('denomination');
-        //     if(denomination.value){
-        //         let item = [denomination.value];
-        //         items.push(item);
-        //         displayItems();
-        //         denomination.value = '';
-        //         localStorage.setItem('items', JSON.stringify(items))
-        //     }
-        // }
-        // let addBtn = document.getElementById('add-to-cart');
-        // addBtn.onclick = addItem;
-        // console.log(items);
     }
     
 
@@ -99,6 +86,10 @@ fetch('assets/data/infosProducts.json')
     fnKeyboard(jsonProducts)
     fnScreen(jsonProducts)  
 })
+
+
+
+var shoppingCart = (function() {
 let cart =[];
 
 // fonction pour sauvegarder sur le localStorage 
@@ -109,20 +100,38 @@ var saveCart = () => {
 
 // fonction pour ajouter un produit au panier  
 
-let addItem = () => {
-    let newDenomination = document.getElementById('denomination');
-    let newPrice = document.getElementById('price');
-    if(newDenomination && newPrice){        
-        console.log(cart);      
-        cart.push(denomination);
-        localStorage.setItem('items', JSON.stringify(cart))
-        saveCart();        
+// let addItem = () => {
+//     let newDenomination = document.getElementById('denomination');
+//     let newPrice = document.getElementById('price');
+//     if(newDenomination && newPrice){        
+//         console.log(cart);      
+//         cart.push(denomination);
+//         localStorage.setItem('items', JSON.stringify(cart))
+//         saveCart();        
+//     }
+// }
+let addBtn = document.querySelectorAll('.add-to-cart');
+
+addBtn.forEach((element)=>{
+
+element.addEventListener('click', addItem)
+
+
+
+let addItem = (event, denomination, price, count) => {
+    console.log(event.target.dataset.denomination);
+    for(var item in cart) {
+      if(cart[item].denomination === denomination) {
+        cart[item].count ++;
+        saveCart();
+        return;
+      }
     }
-}
-
-let addBtn = document.getElementById('add-to-cart');
-addBtn.addEventListener('click', addItem)
-
+    var item = new denomination(denomination, price, count);
+    cart.push(item);
+    saveCart();
+  }
+});
 // fonction pour supprimer un élément du panier
 
 let removeItemFromCart = (denomination) => {
@@ -176,28 +185,12 @@ let totalCart = () => {
     }
     return Number(totalCart);
   }
+})();
 
-
-
-
-
-
-
-
-    
-
-// let removeItem = (event) => {
-//     indexToRemove = event.target.dataset.id
-//     items.splice(indexToRemove,1);
-//     displayItems();
-//     localStorage.setItem('items', JSON.stringify(items))
-// }    
-
-
-   
-   
-
-    
-            
-       
-
+$('.add-to-cart').click(function(event) {
+    event.preventDefault();
+    var denomination = $(this).data('denomination');
+    var price = Number($(this).data('price'));
+    shoppingCart.addItemToCart(denomination, price, 1);
+    displayCart();
+  });
