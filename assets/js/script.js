@@ -87,4 +87,6 @@ fetch('assets/data/infosProducts.json')
 
 // function create
 
+        
+
 
